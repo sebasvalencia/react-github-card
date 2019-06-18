@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import Card from "./Card";
+import CardList from "./CardList";
 
 class App extends React.Component {
   render() {
@@ -25,13 +27,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">The Github Card App</header>
 
-        <div className="github-profile">
-          <img src={testData[0].avatar_url} />
-          <div className="info">
-            <div className="name">{testData[0].name}</div>
-            <div className="company">{testData[0].company}</div>
-          </div>
-        </div>
+        <CardList testData={testData} />
       </div>
     );
   }
