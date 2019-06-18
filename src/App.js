@@ -1,12 +1,10 @@
 import React from "react";
 import "./App.css";
-import Card from "./Card";
 import CardList from "./CardList";
+import Form from "./Form";
 
 class App extends React.Component {
-  
-
-   testData = [
+  testData = [
     {
       name: "Dan Abramov",
       avatar_url: "https://avatars0.githubusercontent.com/u/810438?v=4",
@@ -26,13 +24,14 @@ class App extends React.Component {
 
   state = {
     profiles: this.testData
-  }
+  };
 
   render() {
-    
     return (
       <div className="App">
         <header className="App-header">The Github Card App</header>
+
+        <Form />
 
         <CardList testData={this.state.profiles} />
       </div>
